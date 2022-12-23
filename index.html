@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+
+
+    <title>JS Day 1 Question</title>
+    <style>
+        pre {
+            background-color: white;
+            padding: 15px;
+            border: 3px solid grey;
+            border-radius: 10px;
+        }
+
+        pre:hover {
+            background-color: rgb(200, 200, 181);
+            box-shadow: 5px 5px 2px green;
+            transform: scale(0.85);
+        }
+
+        body {
+            background-color: black;
+        }
+
+        p {
+            color: yellow;
+        }
+
+        h1 {
+            text-align: center;
+            color: aqua;
+            font-weight: bold;
+            font-size: 5em;
+            margin: 15px;
+        }
+
+       
+
+      
+    </style>
+</head>
+
+<body>
+    <h1 class="page-header">JS Handson 14 (Clousers)</h1>
+    <hr>
+    <div class="container-fluid">
+<p><b>"    function counter(){
+    var counter = 0;
+
+    function IncreaseCounter() {
+        return counter += 1;
+    };
+
+    return IncreaseCounter;
+}
+
+var counter = counter();
+alert(counter());
+alert(counter());
+alert(counter());
+alert(counter());"</b></p>
+<pre>
+
+getting alert with values 1,2,3,4
+
+</pre>
+<hr>
+
+
+<p><b>"let count = 0;
+(function () {
+  if (count === 0) {
+    let count = 1;
+    console.log(count); // What is logged?
+  }
+  console.log(count); // What is logged?
+})();"</b></p>
+<pre>
+
+1
+
+</pre>
+<hr>
+
+<p><b>"for (var i = 0; i < 3; i++) {
+  setTimeout(function log() {
+    console.log(i); // What is logged?
+  }, 1000);
+}"</b></p>
+<pre>
+
+3 will be printed 3 times in 1 sec difference
+
+</pre>
+<hr>
+
+<p><b>Write a code to calculate area of a rectangle using inner function. In this case outer function should accept parameter length and inner function should accept parameter breadth.</b></p>
+<pre>
+
+the area of the rectangle is : 1000
+
+</pre>
+<hr>
+
+
+
+<p><b>Take a variable in outer function and create an inner function to increase the counter every time it is called</b></p>
+<pre>
+function counter()
+var counter = 0;
+function IncreaseCounter(){
+  return counter +=1;
+}
+return IncreaseCounter;
+}
+var counter = counter();
+alert (counter())
+alert (counter())
+alert (counter())
+alert (counter())
+</pre>
+<hr>
+
+
+
+
+<p><b>"Print Output
+
+var a = 12;
+(function () {
+  alert(a);
+})();"</b></p>
+<pre>
+
+  getting alert with value 12
+
+
+
+</pre>
+<hr>
+
+
+
+<p><b>"var a = 10;
+var x = (function () {
+  var a = 12;
+  return function () {
+    alert(a);
+  };
+})();
+x();"</b></p>
+<pre>
+
+
+  getting alert with value 12
+
+</pre>
+<hr>
+
+
+
+<p><b>"var globalVar = ""xyz"";
+
+(function outerFunc(outerArg) {
+    var outerVar = 'a';
+    
+    (function innerFunc(innerArg) {
+    var innerVar = 'b';
+    
+    console.log(
+        ""outerArg = "" + outerArg + ""\n"" +
+        ""innerArg = "" + innerArg + ""\n"" +
+        ""outerVar = "" + outerVar + ""\n"" +
+        ""innerVar = "" + innerVar + ""\n"" +
+        ""globalVar = "" + globalVar);
+    
+    })(456);
+})(123);"</b></p>
+<pre>
+
+
+
+OUTPUT 
+      outerArg = 123
+      innerArg = 456
+      outerVar = a
+      innerVar = b
+      globalVar = xyz  
+
+
+
+    
+</pre>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
